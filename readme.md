@@ -25,4 +25,4 @@ The only significant thing in this repo is 2twitcsv.h which can be included in t
 Usage
 -----
 
-In a function where a char pointer **p** points to an in-memory csv file and int **l** is the size of that file and an array of const char pointers **o** points to an array with at least the number of resulting cells, insert #include "2twitcsv.h" and c will be the number of columns and r the number of rows.
+In a function where a char pointer **p** points to an in-memory csv file and int **l** is the size of that file and an array of const char pointers **o** points to an array with at least the number of resulting cells, insert **#include "2twitcsv.h"**. **c** will be the number of columns and **r** the number of rows.
