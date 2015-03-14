@@ -1,7 +1,15 @@
 2twitcsv
 ========
 
+![2TwitCSV](/media/2TwitCSV.png)
+Distribution of characters used in 2TwitCSV.h  
+
 I couldn't find an elegant minimal comma separated value parser so I went overboard and made an unreadable < 280 bytes parser and [twittered](https://twitter.com/Sakrac/status/570029962503147520) about it.
+
+Fixes
+-----
+
+ - Handling quoted special characters such as empty ("") or containing a single quote ("""") or commas (",") was fixed. Previously would cause total bork of the table.
 
 Supports
 --------
@@ -18,7 +26,7 @@ Shortcomings
  - No 16-bit character code representation support
  - Was the unreadbility mentioned?
  - Both the array of cell string pointers and the CSV file itself may need to be padded by 1 element in memory.
- - If the number of columns is inconsistent between rows there may be uninitialized string pointers in the return array
+ - Does not handle lines with different number of cells on each
 
 The only significant thing in this repo is 2twitcsv.h which can be included in the middle of a parsing function.
 
