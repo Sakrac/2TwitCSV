@@ -1,1 +1,1 @@
-char*w=p,d;int q=1,n=0,c=0,r=0,e=0;*o++=w;for(;l--;)switch(d=*p++){case'"':q=e?(*p==d?!(*w++=*p++):1):0;break;case',':if(q){n++;*w++=e=0;*o++=w;}break;case 10:case 13:if(!(e|n))break;if(q){++n;c=c?c:n;o+=c-n;*w++=e=n=0;*o++=w;r++;break;}default:*w++=d;e++;}r+=!!n;
+char*w=p,d;int q=0,n=0,c=0,r=0,e=0;*o++=w;for(;l--;)switch(d=*p++){case'"':q++;if(q>2){*w++=d;q=1;}break;case',':if(q&1)*w++=d;else{n++;*w++=e=q=0;*o++=w;}break;case 10:case 13:if(!(e|n))break;if(!(q&1)){++n;c=c?c:n;*w++=e=n=q=0;*o++=w;r++;break;}default:*w++=d;e++;}r+=!!n;
