@@ -1,10 +1,7 @@
-2twitcsv
-========
-
 ![2TwitCSV](/media/2twitcsv.png)
 Distribution of characters used in 2TwitCSV.h  
 
-I couldn't find an elegant minimal comma separated value parser so I went overboard and made an unreadable < 280 bytes parser and [twittered](https://twitter.com/Sakrac/status/570029962503147520) about it.
+Implementation of a CSV parser in less than 280 bytes (two tweets)
 
 Fixes
 -----
